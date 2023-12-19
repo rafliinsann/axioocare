@@ -1,13 +1,7 @@
 <?php 
 
-namespace RafliInsan\BelajarPhpMvc\View;
-
-class lndex
-{    function lndex(): void
-    {
-        echo "";
-    }
-}
+session_start();
+session_destroy();
 
 ?>
 <!doctype html>
@@ -38,17 +32,17 @@ class lndex
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link text-white" href="#">|</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Home</a>
+                <a class="nav-link text-white" href="index">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">About</a>
+                <a class="nav-link text-white" href="index#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Services</a>
+                <a class="nav-link active text-white" href="login">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">Contact</a>

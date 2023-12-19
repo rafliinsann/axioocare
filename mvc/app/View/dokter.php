@@ -1,12 +1,16 @@
 <?php 
 
-    session_start();
-    require "connect.php";
-    if (isset($_SESSION['status'])== "") {
-        header('location:/');
-    }
+  session_start();
+  require "connect.php";
+  if (isset($_SESSION['status'])== "") {
+      header('location:/');
+  }
 
     $i = 0;
+
+    
+    $query = mysqli_query($connect, "SELECT * FROM akun_dokter");
+    $data = mysqli_fetch_array($query);
 
 ?>
 <!doctype html>
@@ -44,13 +48,13 @@
                 <a class="nav-link text-white" href="#"><u>Home</u></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="/tentang">About</a>
+                <a class="nav-link text-white" href="/about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="/pelayanan">Services</a>
+                <a class="nav-link text-white" href="/services">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="/kontak">Contact</a>
+                <a class="nav-link text-white" href="/contact">Contact</a>
               </li>
             </ul>
             <div class="navbar-text">
@@ -60,9 +64,9 @@
                 </li>
                 <li class="nav-item me-4">
                 <div class="dropdown">
-                <button class="nav-link text-white dropdown-toggle" style="margin-top: 15px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">Hi, <?php echo $_SESSION['nama'] ?>!</button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Setting</a></li>
+                <button class="nav-link text-white dropdown-toggle" style="margin-top: 15px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">Hi, <?php echo $_SESSION['nama_dokter'] ?>!</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/edit?id=<?= $data['id']?>">Edit Profile</a></li>
                     <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                 </ul>
                 </div>

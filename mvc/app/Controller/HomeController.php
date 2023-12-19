@@ -6,18 +6,55 @@ class HomeController
 {
     function index(): void
     {
-        echo "HomeController.index()";
+        include "../app/View/index.php";
     }
-    function hello(): void
+    function lndex(): void
     {
-        echo "HomeController.hello()";
+        include "../app/View/lndex.php";
     }
-    function world(): void
+    function login(): void
     {
-        echo "HomeController.world()";
+        include "../app/View/login.php";
     }
-    function about()
+    function register(): void
     {
-        echo "Author : Rafli Insan";;
+        include "../app/View/register.php";
     }
+    function services(): void
+    {
+        include "../app/View/services.php";
+    }
+    function order(): void
+    {
+        include "../app/View/order.php";
+    }
+    function dokter(): void
+    {
+        include "../app/View/dokter.php";
+    }
+    function edit(): void
+    {
+        include "../app/View/edit.php";
+    }
+    function about(): void
+    {
+        include "../app/View/about.php";
+    }
+    function pelayanan(): void
+    {
+        include "../app/View/pelayanan.php";
+    }
+    function tentang(): void
+    {
+        include "../app/View/tentang.php";
+    }
+    function contact(): void
+    {
+        include "../app/View/contact.php";
+    }
+    function kontak(): void
+    {
+        include "../app/View/kontak.php";
+    }
+
 }

@@ -10,6 +10,7 @@
 .warna2 {
     background-color: #2A97B4;
     color: white;
+    
 
 }
 
@@ -103,4 +104,53 @@
 
 .footer-bg{
     background-color: #0F4C75;
+}
+
+
+/* PAGE 2 */
+.jargon{
+    color: #0F4C75;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.nama-dokter{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-order{
+    font-size: small;
+    border: none;
+    width: 90px;
+    height: 31px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.p-page2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.groundimg1{
+    border-radius: 12px;
+    margin-top: 20px;
+    color: #2A97B4;
+    height:600px;
+    background-color: #0F4C75;
+    background-image: url('../img/laptop.png');
+    background-size: cover;
+}
+
+.margin-top{
+    margin-top: 120px;
+}
+
+.center{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
